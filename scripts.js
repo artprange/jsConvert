@@ -8,6 +8,7 @@ const form = querySelector('form');
 const amount = document.getElementById('amount');
 const currency = document.getElementById('currency');
 const footer = document.querySelector('main footer');
+const description = document.getElementById('description');
 
 
 //validadtion for amount - numbers only
@@ -38,6 +39,11 @@ form.onsubmit = (event) => {
 
 function currencyConverter(amount, quotation, symbol){
     try{
+        //updating
+        description.textContent = `${symbol} 1 = ${price}`
+
+
+
         //adds the class that will show the result on the footer
         footer.classList.add('show-result');
 
@@ -50,3 +56,5 @@ function currencyConverter(amount, quotation, symbol){
     }
 
 }
+
+const formatCurrencyBRL 
